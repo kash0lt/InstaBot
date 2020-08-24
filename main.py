@@ -1,5 +1,11 @@
 from time import sleep
 from selenium import webdriver
+from security import Auth
+# security contains a simple class definition for your instagram login
+# simply class Auth():
+#           def __init__(self):
+#           self.username = <your-instagram-user>
+#           self.password = <your-instagram-login-password>
 
 
 class InstaBot:
@@ -63,7 +69,8 @@ class InstaBot:
         return names
 
 
-my_bot = InstaBot('***', '***')
+auth = Auth()   # retrieve authorization credentials from security.py (not included in posting)
+my_bot = InstaBot(auth.username, auth.password)
 no_follow = my_bot.get_unfollowers()
 del my_bot
 with open("not_follow.txt", "w") as f:
