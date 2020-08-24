@@ -63,7 +63,7 @@ class InstaBot:
         return names
 
 
-my_bot = InstaBot('knsholt', 'arbalb!1982')
+my_bot = InstaBot('***', '***')
 no_follow = my_bot.get_unfollowers()
 del my_bot
 with open("not_follow.txt", "w") as f:
