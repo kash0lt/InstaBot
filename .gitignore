@@ -2,3 +2,4 @@ geckodriver.log
 not_follow.txt
 twitter.py
 security.py
+__pycache__/
