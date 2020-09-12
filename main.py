@@ -32,9 +32,11 @@ class InstaBot:
         sleep(2)
 
     def get_unfollowers(self):
-        self.driver.find_element_by_xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/span").click()
+#        self.driver.find_element_by_xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/span").click()
 
-        self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(self.username)).click()
+        # self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(self.username)).click()
+        # sleep(2)
+        self.driver.get("https://instagram.com/" + self.username)
         sleep(2)
         self.driver.find_element_by_xpath("//a[contains(@href,'/following')]")\
             .click()
