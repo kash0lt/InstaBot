@@ -54,7 +54,7 @@ class InstaBot:
 #        sugs = self.driver.find_element_by_xpath('//h4[contains(text(), Suggestions)]')
 #        self.driver.execute_script('arguments[0].scrollIntoView()', sugs)
 #        sleep(2)
-        scroll_box = self.driver.find_element_by_xpath("/html/body/div[5]/div/div/div[2]")
+        scroll_box = self.driver.find_element_by_class_name('isgrP')     # xpath("/html/body/div[4]/div/div/div[3]")
         last_ht, ht = 0, 1
         while last_ht != ht:
             last_ht = ht
