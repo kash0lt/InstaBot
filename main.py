@@ -66,7 +66,7 @@ class InstaBot:
         links = scroll_box.find_elements_by_tag_name('a')
         names = [name.text for name in links if name.text != '']
         # close button
-        self.driver.find_element_by_xpath("/html/body/div[6]/div/div/div[1]/div/div[2]/button")\
+        self.driver.find_element_by_xpath("/html/body/div[6]/div/div/div/div[1]/div/div[2]/button")\
             .click()
         return names
 
